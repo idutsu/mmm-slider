@@ -9,7 +9,7 @@ add_action( 'wp_enqueue_scripts', function(){
 
 /*
 
-スライダー出力
+スライダー出力関数
 
 @param string $id
 @param array $images

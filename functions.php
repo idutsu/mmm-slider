@@ -23,6 +23,7 @@ add_action( 'wp_enqueue_scripts', function(){
     mmm_slider( $id, $images );
 
 */
+
 function mmm_slider( $id, $images ){
     ob_start();
     ?>

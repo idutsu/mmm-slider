@@ -1,8 +1,8 @@
 <?php
 
 add_action( 'wp_enqueue_scripts', function(){
-    wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('common-style'));
-    wp_enqueue_style( 'slider-style', THEME_URL.'/mmm-slider/style.css', array('slick-style'), filemtime( dirname(__FILE__).'/style.css') );    
+    wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('theme-style'));
+    wp_enqueue_style( 'slider-style', THEME_URL.'/mmm-slider/style.css', array('slick-style'), filemtime( dirname(__FILE__).'/style.css') );
 	wp_enqueue_script( 'slick-js','//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), false );
 });
 
@@ -49,7 +49,7 @@ function mmm_slider( $id, $images ){
             });
         })(jQuery);
     </script>
-    <?php    
+    <?php
         $data = ob_get_contents();
         ob_end_clean();
         echo $data;

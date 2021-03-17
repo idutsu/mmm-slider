@@ -2,6 +2,7 @@
 
 add_action( 'wp_enqueue_scripts', function(){
     wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('theme-style'));
+    wp_enqueue_style( 'slick-theme-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array('slick-style'));
     wp_enqueue_style( 'slider-style', THEME_URL.'/libs/mmm-slider/style.css', array('slick-style'), filemtime( dirname(__FILE__).'/style.css') );
 	wp_enqueue_script( 'slick-js','//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), false );
 });
